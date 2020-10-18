@@ -66,3 +66,5 @@ target/
 # pyenv
 .python-version
 .idea/
+
+Pipfile.lock

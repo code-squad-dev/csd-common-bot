@@ -7,11 +7,11 @@ except IOError:
     long_description = ""
 
 setup(
-    name="common-bot",
+    name="csd-common-bot",
     version="1.0.2",
     description="Common package for selenium bots",
     license="MIT",
-    author="code-squad",
+    author="code-squad-development",
     packages=find_packages(),
     install_requires=[],
     long_description=long_description,
