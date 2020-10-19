@@ -1,7 +1,7 @@
 import time
 from random import randint
 
-from commonbot.component.collector import page_loader
+from csdcommonbot.component.collector import page_loader
 
 
 def function_call_delay(function, delay: int = 1, **kwargs):

@@ -8,7 +8,7 @@ except IOError:
 
 setup(
     name="csd-common-bot",
-    version="1.0.2",
+    version="1.0.3",
     description="Common package for selenium bots",
     license="MIT",
     author="code-squad-development",

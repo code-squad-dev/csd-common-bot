@@ -16,5 +16,9 @@ Check project version
 pip list | grep [package-name]
 ```
 
+Install package locally:
+- Move to dependency package project and run: `pip install .`
+- Move to project dependent project and run: `pipenv install`
+
 More about packaging:
 https://packaging.python.org/tutorials/packaging-projects/
