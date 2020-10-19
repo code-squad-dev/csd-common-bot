@@ -1,4 +1,4 @@
-# common-bot
+# csd-common
 Common packages bot project
 
 ### Usage
@@ -6,6 +6,10 @@ Common packages bot project
 Create the package:
 ```sh
 python3 setup.py sdist bdist_wheel
+```
+Install egg package locally:
+```sh
+python setup.py install
 ```
 Upload new version to pypi repo
 ```sh

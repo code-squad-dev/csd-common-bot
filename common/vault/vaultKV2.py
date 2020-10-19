@@ -1,12 +1,12 @@
 from hvac import Client
 
 
-def read_secret(url: str,
-                token: str,
-                path: str,
-                client_cert_path: str = None,
-                client_key_path: str = None,
-                server_cert_path: str = None):
+def read_secrets(url: str,
+                 token: str,
+                 path: str,
+                 client_cert_path: str = None,
+                 client_key_path: str = None,
+                 server_cert_path: str = None):
     return Client(url=url,
                   token=token,
                   cert=(client_cert_path, client_key_path),

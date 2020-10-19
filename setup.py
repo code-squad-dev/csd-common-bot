@@ -7,8 +7,8 @@ except IOError:
     long_description = ""
 
 setup(
-    name="csd-common-bot",
-    version="1.0.3",
+    name="csd-common",
+    version="0.0.1",
     description="Common package for selenium bots",
     license="MIT",
     author="code-squad-development",
@@ -17,6 +17,6 @@ setup(
     long_description=long_description,
     classifiers=[
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
     ]
 )
