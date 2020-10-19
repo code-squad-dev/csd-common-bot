@@ -9,7 +9,7 @@ python3 setup.py sdist bdist_wheel
 ```
 Install egg package locally:
 ```sh
-python setup.py install
+python3 setup.py install
 ```
 Upload new version to pypi repo
 ```sh
