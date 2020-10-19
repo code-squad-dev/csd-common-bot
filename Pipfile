@@ -7,7 +7,9 @@ verify_ssl = true
 
 [packages]
 selenium = "==3.141.0"
-pipfile = "*"
+common-bot = {path = "."}
+hvac = "==0.10.5"
+bs4 = "==0.0.1"
 
 [requires]
 python_version = "3.8"

@@ -1,7 +1,6 @@
 import csv
 import shutil
-
-from flask_loguru import logger
+import logger
 
 
 def append_array_to_csv_file(csv_file_path: str, csv_array: list):
@@ -9,8 +8,8 @@ def append_array_to_csv_file(csv_file_path: str, csv_array: list):
         writer = csv.writer(csv_file)
         for csv_row in csv_array:
             writer.writerow(csv_row.__dict__.values())
-            logger.debug(
-                'Inserted in to csv file {} row: {}'.format(csv_file.name, csv_row.__dict__.values()))
+            logger.debug('Inserted in to csv file {} row: {}'
+                         .format(csv_file.name, csv_row.__dict__.values()))
 
 
 def clean_csv_file(csv_blank_file_path: str, csv_file_path: str):
