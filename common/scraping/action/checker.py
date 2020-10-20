@@ -10,7 +10,7 @@ def element_exists_by_id(id: str, driver: WebDriver):
     return True
 
 
-def element_exists_by_css(css_selector: str, driver: WebDriver):
+def element_exists_by_css_selector(css_selector: str, driver: WebDriver):
     try:
         driver.find_elements_by_css_selector(css_selector)
     except NoSuchElementException:

@@ -1,7 +1,7 @@
 import time
 from random import randint
 
-from common.scraping.loader import page_loader
+from common.scraping.loader import loader
 
 
 def function_call_delay(function, delay: int = 1, **kwargs):
@@ -18,19 +18,19 @@ def function_call_page_loading_delay_by_tag(function, tag: str = 'img', delay: i
     try:
         return function(**kwargs)
     finally:
-        page_loader.get_page_source_until_all_tags_with_delay(driver=kwargs.get('driver'), tag=tag, delay=delay)
+        loader.get_page_source_until_all_tags_with_delay(driver=kwargs.get('driver'), tag=tag, delay=delay)
 
 
 def function_call_page_loading_delay_by_name(function, name: str, delay: int = 1, **kwargs):
     try:
         return function(**kwargs)
     finally:
-        page_loader.get_page_source_until_all_names_with_delay(driver=kwargs.get('driver'), name=name, delay=delay)
+        loader.get_page_source_until_all_names_with_delay(driver=kwargs.get('driver'), name=name, delay=delay)
 
 
 def function_call_page_loading_delay_by_selector(function, selector: str, delay: int = 1, **kwargs):
     try:
         return function(**kwargs)
     finally:
-        page_loader.get_page_source_until_all_selectors_with_delay(driver=kwargs.get('driver'), selector=selector,
-                                                                   delay=delay)
+        loader.get_page_source_until_all_selectors_with_delay(driver=kwargs.get('driver'), selector=selector,
+                                                              delay=delay)

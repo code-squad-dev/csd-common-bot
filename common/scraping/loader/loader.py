@@ -28,7 +28,7 @@ def get_page_source_until_all_names_with_delay(driver: WebDriver, name: str, tim
     return driver.page_source
 
 
-def get_page_source_until_all_selectors(driver: WebDriver, selector: str, timeout: int = 10):
+def get_page_source_until_all_css_selectors(driver: WebDriver, selector: str, timeout: int = 10):
     WebDriverWait(driver, timeout).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, selector)))
     return driver.page_source
 
