@@ -10,7 +10,8 @@ selenium = "==3.141.0"
 hvac = "==0.10.5"
 bs4 = "==0.0.1"
 logger = "==1.4"
-csd-common = {path = "."}
+beautifulsoup4 = "==4.9.3"
+lxml = "==4.6.1"
 
 [requires]
 python_version = "3.8"
