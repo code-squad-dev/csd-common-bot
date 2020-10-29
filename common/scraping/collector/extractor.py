@@ -43,12 +43,13 @@ def image_src(soup: BeautifulSoup, selector: str):
 
 
 def tag_text(soup: BeautifulSoup, selector: str):
-    return soup.select(selector)[0].text.replace('\r', '').replace('\n', '').strip() if len(
+    return soup.select(selector)[0].text.replace('\r', '').replace('\n', '').replace('\t', '').strip() if len(
         soup.select(selector)) > 0 else ''
 
 
 def tags_text(soup: BeautifulSoup, selector: str):
-    return list(map(lambda x: str(x.text).replace('\r', '').replace('\n', '').strip(), soup.select(selector)))
+    return list(
+        map(lambda x: str(x.text).replace('\r', '').replace('\n', '').replace('\t', '').strip(), soup.select(selector)))
 
 
 def inner_html(soup: BeautifulSoup, selector: str):
@@ -56,12 +57,13 @@ def inner_html(soup: BeautifulSoup, selector: str):
 
 
 def inner_html_str(soup: BeautifulSoup, selector: str):
-    return [str(html).replace('\r', '').replace('\n', '') for html in soup.select(selector)]
+    return [str(html).replace('\r', '').replace('\n', '').replace('\t', '') for html in soup.select(selector)]
 
 
 def inner_html_str_index_0(soup: BeautifulSoup, selector: str):
-    return str(soup.select(selector)[0]).replace('\r', '').replace('\n', '') if len(soup.select(selector)) > 0 else ''
+    return str(soup.select(selector)[0]).replace('\r', '').replace('\n', '').replace('\t', '') if len(
+        soup.select(selector)) > 0 else ''
 
 
 def inner_html_str_at_index(soup: BeautifulSoup, selector: str, index: int):
-    return str(soup.select(selector)[index]).replace('\r', '').replace('\n', '')
+    return str(soup.select(selector)[index]).replace('\r', '').replace('\n', '').replace('\t', '')
