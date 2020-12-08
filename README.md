@@ -1,4 +1,4 @@
-# csd-common
+# csd-common-bot
 Common packages bot project
 
 ### Usage
